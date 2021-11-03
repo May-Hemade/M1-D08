@@ -142,14 +142,21 @@
       /* EXERCISE 9
        Make the heading of the page change color every time the user clicks on it.
       */
-      const makeTextPink = function (eventData) {
-        eventData.target.style.color = "pink"
+      const makeTextColor = function (eventData) {
+        eventData.target.style.color = `rgb(${randomColor()} ,  ${randomColor()},  ${randomColor()} )`
+          
+      }
+      const randomColor= function(){
+        
+          return Math.round(Math.random()*255)
+        
+        
       }
 
       const makeItClickable = function () {
         let headNodes = document.querySelectorAll("div")
 
-        headNodes[0].addEventListener("click", makeTextPink)
+        headNodes[0].addEventListener("click", makeTextColor)
 
         //
       }
